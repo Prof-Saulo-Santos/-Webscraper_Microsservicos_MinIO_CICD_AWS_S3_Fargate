@@ -229,7 +229,9 @@ O projeto está organizado em um **monorepo**, dividido em fases independentes, 
 
 ## 🎓 Escopo Acadêmico
 
-Este projeto foi desenvolvido com fins acadêmicos no contexto do **MBA em Machine Learning in Production**, priorizando:
+Este projeto foi desenvolvido como **exercício prático** da disciplina **"Ciclo de Vida do Modelo"**, ministrada pelos professores **Alessandro Zito**, **Marilde Santos** e **Thiago Costa**, no contexto do **MBA em Machine Learning in Production (UFSCar)**.
+
+O projeto prioriza:
 - Boas práticas de arquitetura
 - Observabilidade
 - Segurança
