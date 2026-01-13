@@ -16,13 +16,18 @@ def main():
             st.cache_data.clear()
             st.success("Cache limpo! Recarregue a busca.")
 
+    engine = SearchEngine()
+    
+    bronze_count = engine.get_bronze_count()
+    silver_count = engine.get_silver_count()
+    
+    st.markdown(f":orange[Bronze: {bronze_count}] | :blue[Silver: {silver_count}]")
+
     # Input
     query = st.text_input(
         "O que você está procurando?",
         placeholder="Ex: 'Applications of LLMs in Healthcare'",
     )
-
-    engine = SearchEngine()
 
     if query:
         with st.spinner("Pesquisando..."):

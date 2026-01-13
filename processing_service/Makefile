@@ -16,7 +16,6 @@ lint:
 
 run:
 	# Roda apenas o banco/infra se necessário, ou o serviço completo
-	@docker network inspect arxiv-shared >/dev/null 2>&1 || docker network create arxiv-shared
 	docker compose up --build -d
 
 clean:

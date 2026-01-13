@@ -157,14 +157,12 @@ O projeto está organizado em um **monorepo**, dividido em fases independentes, 
 - 🔴 Atenção: Se o seu objetivo é avaliar o projeto sob a perspectiva de sua implantação na nuvem AWS, faça a clonagem do projeto inteiro (use este git clone), pois os seguintes arquivos de configuração (ajustados para minIO) serão sobrescritos por aquilo que foi ajustado para AWS: 
 
 - 📂 Ingestion Service
-- ingestion_service/README.md
   - ingestion_service/app/core/config.py
   - ingestion_service/app/main.py
   - ingestion_service/app/scrapers/arxiv_scraper.py
   - ingestion_service/docker-compose.yml
   - ingestion_service/poetry.lock
 - 📂 Processing Service
-  - processing_service/README.md
   - processing_service/Makefile
   - processing_service/app/core/config.py
   - processing_service/app/main.py
@@ -173,7 +171,7 @@ O projeto está organizado em um **monorepo**, dividido em fases independentes, 
   - frontend_service/app/core/config.py
   - frontend_service/app/main.py  
   ```bash
-  git clone --branch v0.4.0 https://github.com/Prof-Saulo-Santos/Webscraper_Microsservicos_MinIO_CICD_AWS_S3_Fargate
+  git clone --branch v0.4.0 https://github.com/Prof-Saulo-Santos/Webscraper_Microsservicos_MinIO_CICD_AWS_S3_Fargate arxiv
   ```
   - **Leia:** `aws_infrastructure/README.md`
 
@@ -181,7 +179,7 @@ O projeto está organizado em um **monorepo**, dividido em fases independentes, 
 - **Responsabilidade:** Provisionamento da infraestrutura em nuvem
 - **Status:** ✅ Implementado e Validado (IaC + Deploy funcional)
 - **Tecnologias:** AWS ECS Fargate, S3, ECR, EventBridge, IAM, Terraform
-- **Versionamento:** v0.4.0
+- **Versionamento:** v0.3.1
 - **Testes (Validação IaC):**
   ```bash
   cd aws_infrastructure

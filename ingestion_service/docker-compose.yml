@@ -1,7 +1,6 @@
 services:
   minio:
     image: minio/minio:latest
-    container_name: arxiv-minio
     command: server /data --console-address ":9001"
     ports:
       - "9000:9000"
@@ -11,15 +10,13 @@ services:
       MINIO_ROOT_PASSWORD: minioadmin
     volumes:
       - minio_data:/data
-    networks:
-      - arxiv-shared
 
   ingestion_service:
     build: .
-    networks:
-      - arxiv-shared
     env_file:
       - .env
+    environment:
+      - S3_ENDPOINT=http://minio:9000
     ports:
       - "8000:8000"
     depends_on:
@@ -32,9 +29,3 @@ services:
 
 volumes:
   minio_data:
-
-
-networks:
-  arxiv-shared:
-    driver: bridge
-    name: arxiv-shared
